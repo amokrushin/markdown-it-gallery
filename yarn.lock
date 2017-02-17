@@ -10,14 +10,14 @@ align-text@^0.1.1, align-text@^0.1.3:
     longest "^1.0.1"
     repeat-string "^1.5.2"
 
-am-node-tape-runner@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/am-node-tape-runner/-/am-node-tape-runner-1.1.1.tgz#4e6c375e86f551499b93f4bd85c1f3b83d43b0fc"
+am-node-tape-runner@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/am-node-tape-runner/-/am-node-tape-runner-1.2.0.tgz#4e35d240eaaeccb5ec334052d90a59d21ba21489"
   dependencies:
     am-tap-dot "^1.0.1"
     async "^2.1.4"
     chalk "^1.1.3"
-    fs-extra "^1.0.0"
+    klaw-sync "^1.1.1"
     lodash "^4.17.2"
     minimatch "^3.0.3"
     nyc "^10.0.0"
@@ -572,14 +572,6 @@ form-data@~2.1.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
-fs-extra@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-1.0.0.tgz#cd3ce5f7e7cb6145883fcae3191e9877f8587950"
-  dependencies:
-    graceful-fs "^4.1.2"
-    jsonfile "^2.1.0"
-    klaw "^1.0.0"
-
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -636,7 +628,7 @@ globals@^9.0.0:
   version "9.16.0"
   resolved "https://registry.yarnpkg.com/globals/-/globals-9.16.0.tgz#63e903658171ec2d9f51b1d31de5e2b8dc01fb80"
 
-graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
+graceful-fs@^4.1.11, graceful-fs@^4.1.2:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
@@ -936,12 +928,6 @@ json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
 
-jsonfile@^2.1.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-2.4.0.tgz#3736a2b428b87bbda0cc83b53fa3d633a35c2ae8"
-  optionalDependencies:
-    graceful-fs "^4.1.6"
-
 jsonpointer@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/jsonpointer/-/jsonpointer-4.0.1.tgz#4fd92cb34e0e9db3c89c8622ecf51f9b978c6cb9"
@@ -960,11 +946,13 @@ kind-of@^3.0.2:
   dependencies:
     is-buffer "^1.0.2"
 
-klaw@^1.0.0:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/klaw/-/klaw-1.3.1.tgz#4088433b46b3b1ba259d78785d8e96f73ba02439"
+klaw-sync@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/klaw-sync/-/klaw-sync-1.1.1.tgz#a9d38cf8f0df17cb696b2e099423c6de92f41273"
+  dependencies:
+    micromatch "^2.3.11"
   optionalDependencies:
-    graceful-fs "^4.1.9"
+    graceful-fs "^4.1.11"
 
 lazy-cache@^1.0.3:
   version "1.0.4"

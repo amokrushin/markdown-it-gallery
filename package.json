@@ -10,12 +10,12 @@
   ],
   "main": "index.js",
   "scripts": {
-    "codecov": "node test ./test/main.js -c lcovonly && ./node_modules/.bin/codecov",
+    "codecov": "iamtest ./test/main.js -c lcovonly && ./node_modules/.bin/codecov",
     "git-reset": "git reset --hard HEAD && git clean -df && git pull",
-    "test": "node test"
+    "test": "iamtest"
   },
   "devDependencies": {
-    "am-node-tape-runner": "^1.1.1",
+    "am-node-tape-runner": "^1.2.0",
     "codecov": "^1.0.1",
     "markdown-it": "^8.2.2",
     "tape": "^4.6.3"
