@@ -10,13 +10,13 @@
   ],
   "main": "index.js",
   "scripts": {
+    "test": "iamtest",
     "codecov": "iamtest ./test/main.js -c lcovonly && ./node_modules/.bin/codecov",
-    "git-reset": "git reset --hard HEAD && git clean -df && git pull",
-    "test": "iamtest"
+    "git-reset": "git reset --hard HEAD && git clean -df && git pull"
   },
   "devDependencies": {
-    "am-node-tape-runner": "^1.2.0",
     "codecov": "^1.0.1",
+    "iamtest": "^1.3.0",
     "markdown-it": "^8.2.2",
     "tape": "^4.6.3"
   },
