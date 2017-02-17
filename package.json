@@ -2,21 +2,25 @@
   "name": "markdown-it-gallery",
   "version": "0.1.0",
   "description": "A markdown-it plugin for wrapping a sequence of images with a custom block element",
-  "main": "index.js",
-  "scripts": {
-    "test": "node test",
-    "codecov": "node test ./test/main.js -c lcovonly && ./node_modules/.bin/codecov"
-  },
-  "author": "Anton Mokrushin <anton@mokr.org> (mokr.org)",
   "license": "MIT",
+  "author": "Anton Mokrushin <anton@mokr.org> (mokr.org)",
   "files": [
     "index.js",
     "example"
   ],
+  "main": "index.js",
+  "scripts": {
+    "codecov": "node test ./test/main.js -c lcovonly && ./node_modules/.bin/codecov",
+    "git-reset": "git reset --hard HEAD && git clean -df && git pull",
+    "test": "node test"
+  },
   "devDependencies": {
     "am-node-tape-runner": "^1.1.1",
     "codecov": "^1.0.1",
     "markdown-it": "^8.2.2",
     "tape": "^4.6.3"
+  },
+  "engines": {
+    "node": ">=6.0.0"
   }
 }
