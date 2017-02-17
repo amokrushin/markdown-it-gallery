@@ -4,7 +4,8 @@
   "description": "A markdown-it plugin for wrapping a sequence of images with a custom block element",
   "main": "index.js",
   "scripts": {
-    "test": "node test"
+    "test": "node test",
+    "codecov": "node test ./test/main.js -c lcovonly && ./node_modules/.bin/codecov"
   },
   "author": "Anton Mokrushin <anton@mokr.org> (mokr.org)",
   "license": "MIT",
@@ -14,6 +15,7 @@
   ],
   "devDependencies": {
     "am-node-tape-runner": "^1.1.1",
+    "codecov": "^1.0.1",
     "markdown-it": "^8.2.2",
     "tape": "^4.6.3"
   }
