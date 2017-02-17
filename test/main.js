@@ -158,15 +158,15 @@ test('option imgClass', (t) => {
     t.end();
 });
 
-test('option linkClass', (t) => {
-    const md = Md().use(galleryPlugin, { wrapImagesInLinks: true, linkClass: 'link' });
+test('options linkClass and linkTarget', (t) => {
+    const md = Md().use(galleryPlugin, { wrapImagesInLinks: true, linkClass: 'link', linkTarget: '_blank' });
     const sample = {
         source: normalizeMarkdown(`
             ![](image-1.jpg)
         `),
         expected: normalizeHtml(`
             <figure>
-                <a href="image-1.jpg" class="link">
+                <a href="image-1.jpg" class="link" target="_blank">
                     <img src="image-1.jpg" alt="">
                 </a>
             </figure>
@@ -200,6 +200,33 @@ test('option imageFilterFn', (t) => {
             </p>
             <figure>
                 <img src="image-3.jpg" alt="">
+            </figure>
+        `),
+    };
+    const actual = normalizeHtml(md.render(sample.source));
+    t.equal(actual, sample.expected, 'render result match');
+    t.end();
+});
+
+test('options linkHrefFn and imageSrcFn', (t) => {
+    function linkHrefFn(token) {
+        return token.attrGet('src').replace('image-1.jpg', 'image-1-800x800.jpg');
+    }
+
+    function imageSrcFn(token) {
+        return token.attrGet('src').replace('image-1.jpg', 'image-1-320x320.jpg');
+    }
+
+    const md = Md().use(galleryPlugin, { wrapImagesInLinks: true, linkHrefFn, imageSrcFn });
+    const sample = {
+        source: normalizeMarkdown(`
+            ![](image-1.jpg)
+        `),
+        expected: normalizeHtml(`
+            <figure>
+                <a href="image-1-800x800.jpg">
+                    <img src="image-1-320x320.jpg" alt="">
+                </a>
             </figure>
         `),
     };
