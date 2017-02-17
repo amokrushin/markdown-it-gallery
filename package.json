@@ -1,0 +1,20 @@
+{
+  "name": "markdown-it-gallery",
+  "version": "0.1.0",
+  "description": "A markdown-it plugin for wrapping a sequence of images with a custom block element",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "Anton Mokrushin <anton@mokr.org> (mokr.org)",
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "example"
+  ],
+  "devDependencies": {
+    "am-node-tape-runner": "^1.1.1",
+    "markdown-it": "^8.2.2",
+    "tape": "^4.6.3"
+  }
+}
