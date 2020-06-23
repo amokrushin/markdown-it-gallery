@@ -41,9 +41,9 @@ class GalleryPlugin {
             }
 
             tokens[i - 1].type = 'gallery_open';
-            tokens[i - 1].tag = 'figure';
+            tokens[i - 1].tag = this.options.galleryTag;
             tokens[i + 1].type = 'gallery_close';
-            tokens[i + 1].tag = 'figure';
+            tokens[i + 1].tag = this.options.galleryTag;
 
             if (this.options.galleryClass) {
                 this.tokenAddClass(tokens[i - 1], this.options.galleryClass);
